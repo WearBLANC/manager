@@ -4,6 +4,8 @@ import Dashboard from "./components/Dashboard"; // Ajuste conforme o caminho do 
 import Login from "./components/Login";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
+import Register from "./components/Register";
+
 
 const App: React.FC = () => {
     const [user, loading] = useAuthState(auth);
@@ -16,6 +18,8 @@ const App: React.FC = () => {
         <Router>
             <Routes>
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register/>}/>
+
                 <Route
                     path="/dashboard"
                     element={user ? <Dashboard /> : <Navigate to="/login" />}
