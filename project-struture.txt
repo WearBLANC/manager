@@ -1,0 +1,4159 @@
+C:.
+├───.github
+│   └───workflows
+├───dist
+├───node_modules
+│   ├───.bin
+│   ├───@discoveryjs
+│   │   └───json-ext
+│   │       ├───dist
+│   │       └───src
+│   ├───@firebase
+│   │   ├───analytics
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───testing
+│   │   │       │       └───integration-tests
+│   │   │       ├───src
+│   │   │       └───testing
+│   │   │           └───integration-tests
+│   │   ├───analytics-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   └───src
+│   │   │       └───src
+│   │   ├───analytics-types
+│   │   ├───app
+│   │   │   └───dist
+│   │   │       ├───app
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       └───esm
+│   │   │           └───app
+│   │   │               ├───src
+│   │   │               └───test
+│   │   ├───app-check
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───app-check-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   └───src
+│   │   │       └───src
+│   │   ├───app-check-interop-types
+│   │   ├───app-check-types
+│   │   ├───app-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   │   └───lite
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       │   └───lite
+│   │   │       └───test
+│   │   ├───app-types
+│   │   ├───auth
+│   │   │   ├───cordova
+│   │   │   ├───dist
+│   │   │   │   ├───browser-cjs
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   ├───cordova
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   ├───esm2017
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   ├───internal
+│   │   │   │   ├───node
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   ├───node-esm
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   ├───rn
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   ├───scripts
+│   │   │   │   ├───src
+│   │   │   │   │   ├───api
+│   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   └───project_config
+│   │   │   │   │   ├───core
+│   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   ├───user
+│   │   │   │   │   │   └───util
+│   │   │   │   │   ├───mfa
+│   │   │   │   │   │   └───assertions
+│   │   │   │   │   ├───model
+│   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   └───util
+│   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   └───strategies
+│   │   │   │   │   ├───platform_node
+│   │   │   │   │   └───platform_react_native
+│   │   │   │   │       └───persistence
+│   │   │   │   ├───test
+│   │   │   │   │   ├───helpers
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   └───integration
+│   │   │   │   │   └───integration
+│   │   │   │   │       ├───flows
+│   │   │   │   │       └───webdriver
+│   │   │   │   │           ├───compat
+│   │   │   │   │           └───util
+│   │   │   │   ├───web-extension-cjs
+│   │   │   │   │   ├───internal
+│   │   │   │   │   ├───scripts
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   │   ├───account_management
+│   │   │   │   │   │   │   ├───authentication
+│   │   │   │   │   │   │   ├───password_policy
+│   │   │   │   │   │   │   └───project_config
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   │   ├───credentials
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   ├───user
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform_browser
+│   │   │   │   │   │   │   ├───iframe
+│   │   │   │   │   │   │   ├───messagechannel
+│   │   │   │   │   │   │   ├───mfa
+│   │   │   │   │   │   │   │   └───assertions
+│   │   │   │   │   │   │   ├───persistence
+│   │   │   │   │   │   │   ├───providers
+│   │   │   │   │   │   │   ├───recaptcha
+│   │   │   │   │   │   │   ├───strategies
+│   │   │   │   │   │   │   └───util
+│   │   │   │   │   │   ├───platform_cordova
+│   │   │   │   │   │   │   ├───popup_redirect
+│   │   │   │   │   │   │   └───strategies
+│   │   │   │   │   │   ├───platform_node
+│   │   │   │   │   │   └───platform_react_native
+│   │   │   │   │   │       └───persistence
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   └───integration
+│   │   │   │   │       └───integration
+│   │   │   │   │           ├───flows
+│   │   │   │   │           └───webdriver
+│   │   │   │   │               ├───compat
+│   │   │   │   │               └───util
+│   │   │   │   └───web-extension-esm2017
+│   │   │   │       ├───internal
+│   │   │   │       ├───scripts
+│   │   │   │       ├───src
+│   │   │   │       │   ├───api
+│   │   │   │       │   │   ├───account_management
+│   │   │   │       │   │   ├───authentication
+│   │   │   │       │   │   ├───password_policy
+│   │   │   │       │   │   └───project_config
+│   │   │   │       │   ├───core
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───credentials
+│   │   │   │       │   │   ├───persistence
+│   │   │   │       │   │   ├───providers
+│   │   │   │       │   │   ├───strategies
+│   │   │   │       │   │   ├───user
+│   │   │   │       │   │   └───util
+│   │   │   │       │   ├───mfa
+│   │   │   │       │   │   └───assertions
+│   │   │   │       │   ├───model
+│   │   │   │       │   ├───platform_browser
+│   │   │   │       │   │   ├───iframe
+│   │   │   │       │   │   ├───messagechannel
+│   │   │   │       │   │   ├───mfa
+│   │   │   │       │   │   │   └───assertions
+│   │   │   │       │   │   ├───persistence
+│   │   │   │       │   │   ├───providers
+│   │   │   │       │   │   ├───recaptcha
+│   │   │   │       │   │   ├───strategies
+│   │   │   │       │   │   └───util
+│   │   │   │       │   ├───platform_cordova
+│   │   │   │       │   │   ├───popup_redirect
+│   │   │   │       │   │   └───strategies
+│   │   │   │       │   ├───platform_node
+│   │   │   │       │   └───platform_react_native
+│   │   │   │       │       └───persistence
+│   │   │   │       └───test
+│   │   │   │           ├───helpers
+│   │   │   │           │   ├───api
+│   │   │   │           │   └───integration
+│   │   │   │           └───integration
+│   │   │   │               ├───flows
+│   │   │   │               └───webdriver
+│   │   │   │                   ├───compat
+│   │   │   │                   └───util
+│   │   │   ├───internal
+│   │   │   └───web-extension
+│   │   ├───auth-compat
+│   │   │   └───dist
+│   │   │       ├───auth-compat
+│   │   │       │   ├───scripts
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       │       ├───helpers
+│   │   │       │       └───integration
+│   │   │       │           └───flows
+│   │   │       └───esm
+│   │   │           └───auth-compat
+│   │   │               ├───scripts
+│   │   │               ├───src
+│   │   │               └───test
+│   │   │                   ├───helpers
+│   │   │                   └───integration
+│   │   │                       └───flows
+│   │   ├───auth-interop-types
+│   │   ├───auth-types
+│   │   ├───component
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───data-connect
+│   │   │   └───dist
+│   │   │       ├───node-esm
+│   │   │       │   └───src
+│   │   │       │       ├───api
+│   │   │       │       ├───core
+│   │   │       │       ├───network
+│   │   │       │       │   └───transport
+│   │   │       │       └───util
+│   │   │       └───src
+│   │   │           ├───api
+│   │   │           ├───core
+│   │   │           ├───network
+│   │   │           │   └───transport
+│   │   │           └───util
+│   │   ├───database
+│   │   │   └───dist
+│   │   │       ├───node-esm
+│   │   │       │   ├───src
+│   │   │       │   │   ├───api
+│   │   │       │   │   ├───core
+│   │   │       │   │   │   ├───operation
+│   │   │       │   │   │   ├───snap
+│   │   │       │   │   │   │   └───indexes
+│   │   │       │   │   │   ├───stats
+│   │   │       │   │   │   ├───storage
+│   │   │       │   │   │   ├───util
+│   │   │       │   │   │   │   └───libs
+│   │   │       │   │   │   └───view
+│   │   │       │   │   │       └───filter
+│   │   │       │   │   ├───internal
+│   │   │       │   │   └───realtime
+│   │   │       │   │       └───polling
+│   │   │       │   └───test
+│   │   │       │       ├───exp
+│   │   │       │       └───helpers
+│   │   │       ├───src
+│   │   │       │   ├───api
+│   │   │       │   ├───core
+│   │   │       │   │   ├───operation
+│   │   │       │   │   ├───snap
+│   │   │       │   │   │   └───indexes
+│   │   │       │   │   ├───stats
+│   │   │       │   │   ├───storage
+│   │   │       │   │   ├───util
+│   │   │       │   │   │   └───libs
+│   │   │       │   │   └───view
+│   │   │       │   │       └───filter
+│   │   │       │   ├───internal
+│   │   │       │   └───realtime
+│   │   │       │       └───polling
+│   │   │       └───test
+│   │   │           ├───exp
+│   │   │           └───helpers
+│   │   ├───database-compat
+│   │   │   ├───dist
+│   │   │   │   ├───database-compat
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   └───util
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───browser
+│   │   │   │   │       └───helpers
+│   │   │   │   └───node-esm
+│   │   │   │       └───database-compat
+│   │   │   │           ├───src
+│   │   │   │           │   ├───api
+│   │   │   │           │   └───util
+│   │   │   │           └───test
+│   │   │   │               ├───browser
+│   │   │   │               └───helpers
+│   │   │   └───standalone
+│   │   ├───database-types
+│   │   ├───firestore
+│   │   │   ├───dist
+│   │   │   │   ├───firestore
+│   │   │   │   │   ├───lite
+│   │   │   │   │   ├───src
+│   │   │   │   │   │   ├───api
+│   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───core
+│   │   │   │   │   │   ├───index
+│   │   │   │   │   │   ├───lite-api
+│   │   │   │   │   │   ├───local
+│   │   │   │   │   │   ├───model
+│   │   │   │   │   │   ├───platform
+│   │   │   │   │   │   │   ├───browser
+│   │   │   │   │   │   │   ├───browser_lite
+│   │   │   │   │   │   │   ├───node
+│   │   │   │   │   │   │   ├───node_lite
+│   │   │   │   │   │   │   ├───rn
+│   │   │   │   │   │   │   └───rn_lite
+│   │   │   │   │   │   ├───protos
+│   │   │   │   │   │   ├───remote
+│   │   │   │   │   │   └───util
+│   │   │   │   │   └───test
+│   │   │   │   │       ├───integration
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   ├───api_internal
+│   │   │   │   │       │   ├───browser
+│   │   │   │   │       │   ├───remote
+│   │   │   │   │       │   └───util
+│   │   │   │   │       ├───lite
+│   │   │   │   │       ├───unit
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   ├───core
+│   │   │   │   │       │   ├───index
+│   │   │   │   │       │   ├───lite-api
+│   │   │   │   │       │   ├───local
+│   │   │   │   │       │   ├───model
+│   │   │   │   │       │   ├───remote
+│   │   │   │   │       │   │   └───bloom_filter_golden_test_data
+│   │   │   │   │       │   ├───specs
+│   │   │   │   │       │   └───util
+│   │   │   │   │       └───util
+│   │   │   │   ├───lite
+│   │   │   │   │   └───firestore
+│   │   │   │   │       ├───lite
+│   │   │   │   │       ├───src
+│   │   │   │   │       │   ├───api
+│   │   │   │   │       │   ├───auth
+│   │   │   │   │       │   ├───core
+│   │   │   │   │       │   ├───index
+│   │   │   │   │       │   ├───lite-api
+│   │   │   │   │       │   ├───local
+│   │   │   │   │       │   ├───model
+│   │   │   │   │       │   ├───platform
+│   │   │   │   │       │   │   ├───browser
+│   │   │   │   │       │   │   ├───browser_lite
+│   │   │   │   │       │   │   ├───node
+│   │   │   │   │       │   │   ├───node_lite
+│   │   │   │   │       │   │   ├───rn
+│   │   │   │   │       │   │   └───rn_lite
+│   │   │   │   │       │   ├───protos
+│   │   │   │   │       │   ├───remote
+│   │   │   │   │       │   └───util
+│   │   │   │   │       └───test
+│   │   │   │   │           ├───integration
+│   │   │   │   │           │   ├───api
+│   │   │   │   │           │   ├───api_internal
+│   │   │   │   │           │   ├───browser
+│   │   │   │   │           │   ├───remote
+│   │   │   │   │           │   └───util
+│   │   │   │   │           ├───lite
+│   │   │   │   │           ├───unit
+│   │   │   │   │           │   ├───api
+│   │   │   │   │           │   ├───core
+│   │   │   │   │           │   ├───index
+│   │   │   │   │           │   ├───lite-api
+│   │   │   │   │           │   ├───local
+│   │   │   │   │           │   ├───model
+│   │   │   │   │           │   ├───remote
+│   │   │   │   │           │   │   └───bloom_filter_golden_test_data
+│   │   │   │   │           │   ├───specs
+│   │   │   │   │           │   └───util
+│   │   │   │   │           └───util
+│   │   │   │   └───packages
+│   │   │   │       └───firestore
+│   │   │   │           ├───lite
+│   │   │   │           ├───src
+│   │   │   │           │   ├───api
+│   │   │   │           │   ├───auth
+│   │   │   │           │   ├───core
+│   │   │   │           │   ├───index
+│   │   │   │           │   ├───lite-api
+│   │   │   │           │   ├───local
+│   │   │   │           │   ├───model
+│   │   │   │           │   ├───platform
+│   │   │   │           │   │   ├───browser
+│   │   │   │           │   │   ├───browser_lite
+│   │   │   │           │   │   ├───node
+│   │   │   │           │   │   ├───node_lite
+│   │   │   │           │   │   ├───rn
+│   │   │   │           │   │   └───rn_lite
+│   │   │   │           │   ├───protos
+│   │   │   │           │   ├───remote
+│   │   │   │           │   └───util
+│   │   │   │           └───test
+│   │   │   │               ├───integration
+│   │   │   │               │   ├───api
+│   │   │   │               │   ├───api_internal
+│   │   │   │               │   ├───browser
+│   │   │   │               │   ├───remote
+│   │   │   │               │   └───util
+│   │   │   │               ├───lite
+│   │   │   │               ├───unit
+│   │   │   │               │   ├───api
+│   │   │   │               │   ├───core
+│   │   │   │               │   ├───index
+│   │   │   │               │   ├───lite-api
+│   │   │   │               │   ├───local
+│   │   │   │               │   ├───model
+│   │   │   │               │   ├───remote
+│   │   │   │               │   │   └───bloom_filter_golden_test_data
+│   │   │   │               │   ├───specs
+│   │   │   │               │   └───util
+│   │   │   │               └───util
+│   │   │   └───lite
+│   │   ├───firestore-compat
+│   │   │   └───dist
+│   │   │       ├───node-esm
+│   │   │       │   ├───src
+│   │   │       │   │   ├───api
+│   │   │       │   │   └───util
+│   │   │       │   └───test
+│   │   │       │       └───util
+│   │   │       ├───src
+│   │   │       │   ├───api
+│   │   │       │   └───util
+│   │   │       └───test
+│   │   │           └───util
+│   │   ├───firestore-types
+│   │   ├───functions
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───functions-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───functions-types
+│   │   ├───installations
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   └───src
+│   │   │       │       ├───api
+│   │   │       │       ├───functions
+│   │   │       │       ├───helpers
+│   │   │       │       ├───interfaces
+│   │   │       │       ├───testing
+│   │   │       │       └───util
+│   │   │       └───src
+│   │   │           ├───api
+│   │   │           ├───functions
+│   │   │           ├───helpers
+│   │   │           ├───interfaces
+│   │   │           ├───testing
+│   │   │           └───util
+│   │   ├───installations-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   └───src
+│   │   │       │       └───testing
+│   │   │       └───src
+│   │   │           └───testing
+│   │   ├───installations-types
+│   │   ├───logger
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───messaging
+│   │   │   ├───dist
+│   │   │   │   ├───esm
+│   │   │   │   │   └───src
+│   │   │   │   │       ├───api
+│   │   │   │   │       ├───helpers
+│   │   │   │   │       ├───interfaces
+│   │   │   │   │       ├───internals
+│   │   │   │   │       ├───listeners
+│   │   │   │   │       ├───testing
+│   │   │   │   │       │   └───fakes
+│   │   │   │   │       └───util
+│   │   │   │   ├───src
+│   │   │   │   │   ├───api
+│   │   │   │   │   ├───helpers
+│   │   │   │   │   ├───interfaces
+│   │   │   │   │   ├───internals
+│   │   │   │   │   ├───listeners
+│   │   │   │   │   ├───testing
+│   │   │   │   │   │   └───fakes
+│   │   │   │   │   └───util
+│   │   │   │   └───sw
+│   │   │   └───sw
+│   │   ├───messaging-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───messaging-interop-types
+│   │   ├───performance
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   │   ├───controllers
+│   │   │       │   │   ├───resources
+│   │   │       │   │   ├───services
+│   │   │       │   │   └───utils
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       │   ├───controllers
+│   │   │       │   ├───resources
+│   │   │       │   ├───services
+│   │   │       │   └───utils
+│   │   │       └───test
+│   │   ├───performance-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───performance-types
+│   │   ├───remote-config
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   │   ├───client
+│   │   │       │   │   └───storage
+│   │   │       │   └───test
+│   │   │       │       ├───client
+│   │   │       │       └───storage
+│   │   │       ├───src
+│   │   │       │   ├───client
+│   │   │       │   └───storage
+│   │   │       └───test
+│   │   │           ├───client
+│   │   │           └───storage
+│   │   ├───remote-config-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───remote-config-types
+│   │   ├───storage
+│   │   │   └───dist
+│   │   │       ├───node-esm
+│   │   │       │   ├───src
+│   │   │       │   │   ├───implementation
+│   │   │       │   │   └───platform
+│   │   │       │   │       ├───browser
+│   │   │       │   │       └───node
+│   │   │       │   └───test
+│   │   │       │       ├───browser
+│   │   │       │       ├───integration
+│   │   │       │       ├───node
+│   │   │       │       └───unit
+│   │   │       ├───src
+│   │   │       │   ├───implementation
+│   │   │       │   └───platform
+│   │   │       │       ├───browser
+│   │   │       │       └───node
+│   │   │       └───test
+│   │   │           ├───browser
+│   │   │           ├───integration
+│   │   │           ├───node
+│   │   │           └───unit
+│   │   ├───storage-compat
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       │       ├───integration
+│   │   │       │       └───unit
+│   │   │       ├───src
+│   │   │       └───test
+│   │   │           ├───integration
+│   │   │           └───unit
+│   │   ├───storage-types
+│   │   ├───util
+│   │   │   └───dist
+│   │   │       ├───node-esm
+│   │   │       │   ├───src
+│   │   │       │   └───test
+│   │   │       ├───src
+│   │   │       └───test
+│   │   ├───vertexai
+│   │   │   └───dist
+│   │   │       ├───esm
+│   │   │       │   ├───src
+│   │   │       │   │   ├───methods
+│   │   │       │   │   ├───models
+│   │   │       │   │   ├───requests
+│   │   │       │   │   └───types
+│   │   │       │   └───test-utils
+│   │   │       ├───src
+│   │   │       │   ├───methods
+│   │   │       │   ├───models
+│   │   │       │   ├───requests
+│   │   │       │   └───types
+│   │   │       └───test-utils
+│   │   └───webchannel-wrapper
+│   │       ├───bloom-blob
+│   │       ├───dist
+│   │       │   ├───bloom-blob
+│   │       │   │   └───esm
+│   │       │   └───webchannel-blob
+│   │       │       └───esm
+│   │       └───webchannel-blob
+│   ├───@grpc
+│   │   ├───grpc-js
+│   │   │   ├───build
+│   │   │   │   └───src
+│   │   │   │       └───generated
+│   │   │   │           ├───google
+│   │   │   │           │   └───protobuf
+│   │   │   │           └───grpc
+│   │   │   │               └───channelz
+│   │   │   │                   └───v1
+│   │   │   ├───proto
+│   │   │   └───src
+│   │   │       └───generated
+│   │   │           ├───google
+│   │   │           │   └───protobuf
+│   │   │           └───grpc
+│   │   │               └───channelz
+│   │   │                   └───v1
+│   │   └───proto-loader
+│   │       └───build
+│   │           ├───bin
+│   │           └───src
+│   ├───@jridgewell
+│   │   ├───gen-mapping
+│   │   │   └───dist
+│   │   │       └───types
+│   │   ├───resolve-uri
+│   │   │   └───dist
+│   │   │       └───types
+│   │   ├───set-array
+│   │   │   └───dist
+│   │   │       └───types
+│   │   ├───source-map
+│   │   │   └───dist
+│   │   │       └───types
+│   │   ├───sourcemap-codec
+│   │   │   └───dist
+│   │   │       └───types
+│   │   └───trace-mapping
+│   │       └───dist
+│   │           └───types
+│   ├───@jsonjoy.com
+│   │   ├───base64
+│   │   │   └───lib
+│   │   │       └───util
+│   │   │           ├───buffers
+│   │   │           └───strings
+│   │   ├───json-pack
+│   │   │   └───lib
+│   │   │       ├───bencode
+│   │   │       ├───bson
+│   │   │       ├───cbor
+│   │   │       ├───codecs
+│   │   │       ├───ion
+│   │   │       ├───json
+│   │   │       ├───json-binary
+│   │   │       ├───json-pointer
+│   │   │       ├───msgpack
+│   │   │       ├───resp
+│   │   │       ├───ubjson
+│   │   │       ├───util
+│   │   │       │   └───buffers
+│   │   │       └───__demos__
+│   │   └───util
+│   │       └───lib
+│   │           ├───buffers
+│   │           │   └───utf8
+│   │           │       └───decodeUtf8
+│   │           ├───codegen
+│   │           │   └───util
+│   │           ├───compression
+│   │           ├───json-brand
+│   │           ├───json-clone
+│   │           ├───json-equal
+│   │           │   ├───$$deepEqual
+│   │           │   └───deepEqual
+│   │           ├───json-pointer
+│   │           ├───json-random
+│   │           ├───json-size
+│   │           ├───print
+│   │           ├───sort
+│   │           ├───streams
+│   │           └───strings
+│   ├───@leichtgewicht
+│   │   └───ip-codec
+│   │       └───types
+│   ├───@protobufjs
+│   │   ├───aspromise
+│   │   │   └───tests
+│   │   ├───base64
+│   │   │   └───tests
+│   │   ├───codegen
+│   │   │   └───tests
+│   │   ├───eventemitter
+│   │   │   └───tests
+│   │   ├───fetch
+│   │   │   └───tests
+│   │   ├───float
+│   │   │   ├───bench
+│   │   │   └───tests
+│   │   ├───inquire
+│   │   │   └───tests
+│   │   │       └───data
+│   │   ├───path
+│   │   │   └───tests
+│   │   ├───pool
+│   │   │   └───tests
+│   │   └───utf8
+│   │       └───tests
+│   │           └───data
+│   ├───@types
+│   │   ├───body-parser
+│   │   ├───bonjour
+│   │   ├───connect
+│   │   ├───connect-history-api-fallback
+│   │   ├───eslint
+│   │   │   └───rules
+│   │   ├───eslint-scope
+│   │   ├───estree
+│   │   ├───express
+│   │   │   └───node_modules
+│   │   │       └───@types
+│   │   │           └───express-serve-static-core
+│   │   ├───express-serve-static-core
+│   │   ├───html-minifier-terser
+│   │   ├───http-errors
+│   │   ├───http-proxy
+│   │   ├───json-schema
+│   │   ├───mime
+│   │   ├───node
+│   │   │   ├───assert
+│   │   │   ├───compatibility
+│   │   │   ├───dns
+│   │   │   ├───fs
+│   │   │   ├───readline
+│   │   │   ├───stream
+│   │   │   ├───timers
+│   │   │   └───ts5.6
+│   │   ├───node-forge
+│   │   ├───prop-types
+│   │   ├───qs
+│   │   ├───range-parser
+│   │   ├───react
+│   │   │   └───ts5.0
+│   │   ├───react-dom
+│   │   │   └───test-utils
+│   │   ├───retry
+│   │   ├───send
+│   │   ├───serve-index
+│   │   ├───serve-static
+│   │   ├───sockjs
+│   │   └───ws
+│   ├───@webassemblyjs
+│   │   ├───ast
+│   │   │   ├───esm
+│   │   │   │   ├───transform
+│   │   │   │   │   ├───ast-module-to-module-context
+│   │   │   │   │   ├───denormalize-type-references
+│   │   │   │   │   └───wast-identifier-to-index
+│   │   │   │   └───types
+│   │   │   ├───lib
+│   │   │   │   ├───transform
+│   │   │   │   │   ├───ast-module-to-module-context
+│   │   │   │   │   ├───denormalize-type-references
+│   │   │   │   │   └───wast-identifier-to-index
+│   │   │   │   └───types
+│   │   │   └───scripts
+│   │   ├───floating-point-hex-parser
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───helper-api-error
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───helper-buffer
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───helper-numbers
+│   │   │   ├───esm
+│   │   │   ├───lib
+│   │   │   └───src
+│   │   ├───helper-wasm-bytecode
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───helper-wasm-section
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───ieee754
+│   │   │   ├───esm
+│   │   │   ├───lib
+│   │   │   └───src
+│   │   ├───leb128
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───utf8
+│   │   │   ├───esm
+│   │   │   ├───lib
+│   │   │   ├───src
+│   │   │   └───test
+│   │   ├───wasm-edit
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───wasm-gen
+│   │   │   ├───esm
+│   │   │   │   └───encoder
+│   │   │   └───lib
+│   │   │       └───encoder
+│   │   ├───wasm-opt
+│   │   │   ├───esm
+│   │   │   └───lib
+│   │   ├───wasm-parser
+│   │   │   ├───esm
+│   │   │   │   └───types
+│   │   │   └───lib
+│   │   │       └───types
+│   │   └───wast-printer
+│   │       ├───esm
+│   │       └───lib
+│   ├───@webpack-cli
+│   │   ├───configtest
+│   │   │   └───lib
+│   │   ├───info
+│   │   │   └───lib
+│   │   └───serve
+│   │       └───lib
+│   ├───@xtuc
+│   │   ├───ieee754
+│   │   │   └───dist
+│   │   └───long
+│   │       ├───dist
+│   │       └───src
+│   ├───accepts
+│   │   └───node_modules
+│   │       └───negotiator
+│   │           └───lib
+│   ├───acorn
+│   │   ├───bin
+│   │   └───dist
+│   ├───ajv
+│   │   ├───dist
+│   │   ├───lib
+│   │   │   ├───compile
+│   │   │   ├───dot
+│   │   │   ├───dotjs
+│   │   │   └───refs
+│   │   └───scripts
+│   ├───ajv-formats
+│   │   ├───dist
+│   │   ├───node_modules
+│   │   │   ├───ajv
+│   │   │   │   ├───dist
+│   │   │   │   │   ├───compile
+│   │   │   │   │   │   ├───codegen
+│   │   │   │   │   │   ├───jtd
+│   │   │   │   │   │   └───validate
+│   │   │   │   │   ├───refs
+│   │   │   │   │   │   ├───json-schema-2019-09
+│   │   │   │   │   │   │   └───meta
+│   │   │   │   │   │   └───json-schema-2020-12
+│   │   │   │   │   │       └───meta
+│   │   │   │   │   ├───runtime
+│   │   │   │   │   ├───standalone
+│   │   │   │   │   ├───types
+│   │   │   │   │   └───vocabularies
+│   │   │   │   │       ├───applicator
+│   │   │   │   │       ├───core
+│   │   │   │   │       ├───discriminator
+│   │   │   │   │       ├───dynamic
+│   │   │   │   │       ├───format
+│   │   │   │   │       ├───jtd
+│   │   │   │   │       ├───unevaluated
+│   │   │   │   │       └───validation
+│   │   │   │   └───lib
+│   │   │   │       ├───compile
+│   │   │   │       │   ├───codegen
+│   │   │   │       │   ├───jtd
+│   │   │   │       │   └───validate
+│   │   │   │       ├───refs
+│   │   │   │       │   ├───json-schema-2019-09
+│   │   │   │       │   │   └───meta
+│   │   │   │       │   └───json-schema-2020-12
+│   │   │   │       │       └───meta
+│   │   │   │       ├───runtime
+│   │   │   │       ├───standalone
+│   │   │   │       ├───types
+│   │   │   │       └───vocabularies
+│   │   │   │           ├───applicator
+│   │   │   │           ├───core
+│   │   │   │           ├───discriminator
+│   │   │   │           ├───dynamic
+│   │   │   │           ├───format
+│   │   │   │           ├───jtd
+│   │   │   │           ├───unevaluated
+│   │   │   │           └───validation
+│   │   │   └───json-schema-traverse
+│   │   │       ├───.github
+│   │   │       │   └───workflows
+│   │   │       └───spec
+│   │   │           └───fixtures
+│   │   └───src
+│   ├───ajv-keywords
+│   │   └───keywords
+│   │       ├───dot
+│   │       └───dotjs
+│   ├───ansi-html-community
+│   │   └───bin
+│   ├───ansi-regex
+│   ├───ansi-styles
+│   ├───anymatch
+│   ├───array-flatten
+│   ├───batch
+│   ├───binary-extensions
+│   ├───body-parser
+│   │   └───lib
+│   │       └───types
+│   ├───bonjour-service
+│   │   ├───dist
+│   │   │   └───lib
+│   │   │       └───utils
+│   │   └───types
+│   ├───boolbase
+│   ├───braces
+│   │   └───lib
+│   ├───browserslist
+│   ├───buffer-from
+│   ├───bundle-name
+│   ├───bytes
+│   ├───call-bind
+│   │   ├───.github
+│   │   └───test
+│   ├───camel-case
+│   │   ├───dist
+│   │   └───dist.es2015
+│   ├───caniuse-lite
+│   │   ├───data
+│   │   │   ├───features
+│   │   │   └───regions
+│   │   └───dist
+│   │       ├───lib
+│   │       └───unpacker
+│   ├───chalk
+│   │   └───source
+│   ├───chokidar
+│   │   ├───lib
+│   │   └───types
+│   ├───chrome-trace-event
+│   │   └───dist
+│   ├───clean-css
+│   │   └───lib
+│   │       ├───optimizer
+│   │       │   ├───configuration
+│   │       │   │   └───properties
+│   │       │   ├───level-0
+│   │       │   ├───level-1
+│   │       │   │   ├───property-optimizers
+│   │       │   │   └───value-optimizers
+│   │       │   │       └───color
+│   │       │   └───level-2
+│   │       │       └───properties
+│   │       ├───options
+│   │       ├───reader
+│   │       ├───tokenizer
+│   │       ├───utils
+│   │       └───writer
+│   ├───cliui
+│   │   └───build
+│   │       └───lib
+│   ├───clone-deep
+│   ├───color-convert
+│   ├───color-name
+│   ├───colorette
+│   ├───commander
+│   │   ├───lib
+│   │   └───typings
+│   ├───compressible
+│   ├───compression
+│   ├───connect-history-api-fallback
+│   │   └───lib
+│   ├───content-disposition
+│   ├───content-type
+│   ├───cookie
+│   ├───cookie-signature
+│   ├───core-util-is
+│   │   └───lib
+│   ├───cross-spawn
+│   │   └───lib
+│   │       └───util
+│   ├───css-select
+│   │   └───lib
+│   │       └───pseudo-selectors
+│   ├───css-what
+│   │   └───lib
+│   │       ├───commonjs
+│   │       └───es
+│   ├───csstype
+│   ├───debug
+│   │   └───src
+│   ├───default-browser
+│   ├───default-browser-id
+│   ├───define-data-property
+│   │   ├───.github
+│   │   └───test
+│   ├───define-lazy-prop
+│   ├───depd
+│   │   └───lib
+│   │       └───browser
+│   ├───destroy
+│   ├───detect-node
+│   ├───dns-packet
+│   ├───dom-converter
+│   │   └───lib
+│   ├───dom-serializer
+│   │   └───lib
+│   │       └───esm
+│   ├───domelementtype
+│   │   └───lib
+│   │       └───esm
+│   ├───domhandler
+│   │   └───lib
+│   ├───domutils
+│   │   └───lib
+│   ├───dot-case
+│   │   ├───dist
+│   │   └───dist.es2015
+│   ├───ee-first
+│   ├───electron-to-chromium
+│   ├───emoji-regex
+│   │   └───es2015
+│   ├───encodeurl
+│   ├───enhanced-resolve
+│   │   └───lib
+│   │       └───util
+│   ├───entities
+│   │   └───lib
+│   │       └───maps
+│   ├───envinfo
+│   │   └───dist
+│   ├───es-define-property
+│   │   ├───.github
+│   │   └───test
+│   ├───es-errors
+│   │   ├───.github
+│   │   └───test
+│   ├───es-module-lexer
+│   │   ├───dist
+│   │   └───types
+│   ├───escalade
+│   │   ├───dist
+│   │   └───sync
+│   ├───escape-html
+│   ├───eslint-scope
+│   │   └───lib
+│   ├───esrecurse
+│   │   └───node_modules
+│   │       └───estraverse
+│   ├───estraverse
+│   ├───etag
+│   ├───eventemitter3
+│   │   └───umd
+│   ├───events
+│   │   ├───.github
+│   │   └───tests
+│   ├───express
+│   │   └───lib
+│   │       ├───middleware
+│   │       └───router
+│   ├───fast-deep-equal
+│   │   └───es6
+│   ├───fast-json-stable-stringify
+│   │   ├───.github
+│   │   ├───benchmark
+│   │   ├───example
+│   │   └───test
+│   ├───fast-uri
+│   │   ├───.github
+│   │   │   └───workflows
+│   │   ├───lib
+│   │   ├───test
+│   │   └───types
+│   ├───fastest-levenshtein
+│   │   └───esm
+│   ├───faye-websocket
+│   │   └───lib
+│   │       └───faye
+│   │           └───websocket
+│   │               └───api
+│   ├───fill-range
+│   ├───finalhandler
+│   ├───find-up
+│   ├───firebase
+│   │   ├───analytics
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───app
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───app-check
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───auth
+│   │   │   ├───cordova
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───dist
+│   │   │   │   ├───analytics
+│   │   │   │   ├───app
+│   │   │   │   ├───app-check
+│   │   │   │   ├───auth
+│   │   │   │   │   ├───cordova
+│   │   │   │   │   └───web-extension
+│   │   │   │   ├───compat
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   └───storage
+│   │   │   │   ├───data-connect
+│   │   │   │   ├───database
+│   │   │   │   ├───esm
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───cordova
+│   │   │   │   │   │   └───web-extension
+│   │   │   │   │   ├───compat
+│   │   │   │   │   │   ├───analytics
+│   │   │   │   │   │   ├───app
+│   │   │   │   │   │   ├───app-check
+│   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───database
+│   │   │   │   │   │   ├───firestore
+│   │   │   │   │   │   ├───functions
+│   │   │   │   │   │   ├───installations
+│   │   │   │   │   │   ├───messaging
+│   │   │   │   │   │   ├───performance
+│   │   │   │   │   │   ├───remote-config
+│   │   │   │   │   │   └───storage
+│   │   │   │   │   ├───data-connect
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   │   └───lite
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   │   └───sw
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   ├───storage
+│   │   │   │   │   └───vertexai
+│   │   │   │   ├───firestore
+│   │   │   │   │   └───lite
+│   │   │   │   ├───functions
+│   │   │   │   ├───installations
+│   │   │   │   ├───messaging
+│   │   │   │   │   └───sw
+│   │   │   │   ├───performance
+│   │   │   │   ├───remote-config
+│   │   │   │   ├───storage
+│   │   │   │   └───vertexai
+│   │   │   └───web-extension
+│   │   │       └───dist
+│   │   │           ├───analytics
+│   │   │           ├───app
+│   │   │           ├───app-check
+│   │   │           ├───auth
+│   │   │           │   ├───cordova
+│   │   │           │   └───web-extension
+│   │   │           ├───compat
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   └───storage
+│   │   │           ├───data-connect
+│   │   │           ├───database
+│   │   │           ├───esm
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   │   ├───cordova
+│   │   │           │   │   └───web-extension
+│   │   │           │   ├───compat
+│   │   │           │   │   ├───analytics
+│   │   │           │   │   ├───app
+│   │   │           │   │   ├───app-check
+│   │   │           │   │   ├───auth
+│   │   │           │   │   ├───database
+│   │   │           │   │   ├───firestore
+│   │   │           │   │   ├───functions
+│   │   │           │   │   ├───installations
+│   │   │           │   │   ├───messaging
+│   │   │           │   │   ├───performance
+│   │   │           │   │   ├───remote-config
+│   │   │           │   │   └───storage
+│   │   │           │   ├───data-connect
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   │   └───lite
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   │   └───sw
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   ├───storage
+│   │   │           │   └───vertexai
+│   │   │           ├───firestore
+│   │   │           │   └───lite
+│   │   │           ├───functions
+│   │   │           ├───installations
+│   │   │           ├───messaging
+│   │   │           │   └───sw
+│   │   │           ├───performance
+│   │   │           ├───remote-config
+│   │   │           ├───storage
+│   │   │           └───vertexai
+│   │   ├───compat
+│   │   │   ├───analytics
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───app
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───app-check
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───auth
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───database
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───dist
+│   │   │   │   ├───analytics
+│   │   │   │   ├───app
+│   │   │   │   ├───app-check
+│   │   │   │   ├───auth
+│   │   │   │   │   ├───cordova
+│   │   │   │   │   └───web-extension
+│   │   │   │   ├───compat
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   └───storage
+│   │   │   │   ├───data-connect
+│   │   │   │   ├───database
+│   │   │   │   ├───esm
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───cordova
+│   │   │   │   │   │   └───web-extension
+│   │   │   │   │   ├───compat
+│   │   │   │   │   │   ├───analytics
+│   │   │   │   │   │   ├───app
+│   │   │   │   │   │   ├───app-check
+│   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───database
+│   │   │   │   │   │   ├───firestore
+│   │   │   │   │   │   ├───functions
+│   │   │   │   │   │   ├───installations
+│   │   │   │   │   │   ├───messaging
+│   │   │   │   │   │   ├───performance
+│   │   │   │   │   │   ├───remote-config
+│   │   │   │   │   │   └───storage
+│   │   │   │   │   ├───data-connect
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   │   └───lite
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   │   └───sw
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   ├───storage
+│   │   │   │   │   └───vertexai
+│   │   │   │   ├───firestore
+│   │   │   │   │   └───lite
+│   │   │   │   ├───functions
+│   │   │   │   ├───installations
+│   │   │   │   ├───messaging
+│   │   │   │   │   └───sw
+│   │   │   │   ├───performance
+│   │   │   │   ├───remote-config
+│   │   │   │   ├───storage
+│   │   │   │   └───vertexai
+│   │   │   ├───firestore
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───functions
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───installations
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───messaging
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───performance
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   ├───remote-config
+│   │   │   │   └───dist
+│   │   │   │       ├───analytics
+│   │   │   │       ├───app
+│   │   │   │       ├───app-check
+│   │   │   │       ├───auth
+│   │   │   │       │   ├───cordova
+│   │   │   │       │   └───web-extension
+│   │   │   │       ├───compat
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   └───storage
+│   │   │   │       ├───data-connect
+│   │   │   │       ├───database
+│   │   │   │       ├───esm
+│   │   │   │       │   ├───analytics
+│   │   │   │       │   ├───app
+│   │   │   │       │   ├───app-check
+│   │   │   │       │   ├───auth
+│   │   │   │       │   │   ├───cordova
+│   │   │   │       │   │   └───web-extension
+│   │   │   │       │   ├───compat
+│   │   │   │       │   │   ├───analytics
+│   │   │   │       │   │   ├───app
+│   │   │   │       │   │   ├───app-check
+│   │   │   │       │   │   ├───auth
+│   │   │   │       │   │   ├───database
+│   │   │   │       │   │   ├───firestore
+│   │   │   │       │   │   ├───functions
+│   │   │   │       │   │   ├───installations
+│   │   │   │       │   │   ├───messaging
+│   │   │   │       │   │   ├───performance
+│   │   │   │       │   │   ├───remote-config
+│   │   │   │       │   │   └───storage
+│   │   │   │       │   ├───data-connect
+│   │   │   │       │   ├───database
+│   │   │   │       │   ├───firestore
+│   │   │   │       │   │   └───lite
+│   │   │   │       │   ├───functions
+│   │   │   │       │   ├───installations
+│   │   │   │       │   ├───messaging
+│   │   │   │       │   │   └───sw
+│   │   │   │       │   ├───performance
+│   │   │   │       │   ├───remote-config
+│   │   │   │       │   ├───storage
+│   │   │   │       │   └───vertexai
+│   │   │   │       ├───firestore
+│   │   │   │       │   └───lite
+│   │   │   │       ├───functions
+│   │   │   │       ├───installations
+│   │   │   │       ├───messaging
+│   │   │   │       │   └───sw
+│   │   │   │       ├───performance
+│   │   │   │       ├───remote-config
+│   │   │   │       ├───storage
+│   │   │   │       └───vertexai
+│   │   │   └───storage
+│   │   │       └───dist
+│   │   │           ├───analytics
+│   │   │           ├───app
+│   │   │           ├───app-check
+│   │   │           ├───auth
+│   │   │           │   ├───cordova
+│   │   │           │   └───web-extension
+│   │   │           ├───compat
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   └───storage
+│   │   │           ├───data-connect
+│   │   │           ├───database
+│   │   │           ├───esm
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   │   ├───cordova
+│   │   │           │   │   └───web-extension
+│   │   │           │   ├───compat
+│   │   │           │   │   ├───analytics
+│   │   │           │   │   ├───app
+│   │   │           │   │   ├───app-check
+│   │   │           │   │   ├───auth
+│   │   │           │   │   ├───database
+│   │   │           │   │   ├───firestore
+│   │   │           │   │   ├───functions
+│   │   │           │   │   ├───installations
+│   │   │           │   │   ├───messaging
+│   │   │           │   │   ├───performance
+│   │   │           │   │   ├───remote-config
+│   │   │           │   │   └───storage
+│   │   │           │   ├───data-connect
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   │   └───lite
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   │   └───sw
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   ├───storage
+│   │   │           │   └───vertexai
+│   │   │           ├───firestore
+│   │   │           │   └───lite
+│   │   │           ├───functions
+│   │   │           ├───installations
+│   │   │           ├───messaging
+│   │   │           │   └───sw
+│   │   │           ├───performance
+│   │   │           ├───remote-config
+│   │   │           ├───storage
+│   │   │           └───vertexai
+│   │   ├───data-connect
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───database
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───firestore
+│   │   │   ├───dist
+│   │   │   │   ├───analytics
+│   │   │   │   ├───app
+│   │   │   │   ├───app-check
+│   │   │   │   ├───auth
+│   │   │   │   │   ├───cordova
+│   │   │   │   │   └───web-extension
+│   │   │   │   ├───compat
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   └───storage
+│   │   │   │   ├───data-connect
+│   │   │   │   ├───database
+│   │   │   │   ├───esm
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───cordova
+│   │   │   │   │   │   └───web-extension
+│   │   │   │   │   ├───compat
+│   │   │   │   │   │   ├───analytics
+│   │   │   │   │   │   ├───app
+│   │   │   │   │   │   ├───app-check
+│   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───database
+│   │   │   │   │   │   ├───firestore
+│   │   │   │   │   │   ├───functions
+│   │   │   │   │   │   ├───installations
+│   │   │   │   │   │   ├───messaging
+│   │   │   │   │   │   ├───performance
+│   │   │   │   │   │   ├───remote-config
+│   │   │   │   │   │   └───storage
+│   │   │   │   │   ├───data-connect
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   │   └───lite
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   │   └───sw
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   ├───storage
+│   │   │   │   │   └───vertexai
+│   │   │   │   ├───firestore
+│   │   │   │   │   └───lite
+│   │   │   │   ├───functions
+│   │   │   │   ├───installations
+│   │   │   │   ├───messaging
+│   │   │   │   │   └───sw
+│   │   │   │   ├───performance
+│   │   │   │   ├───remote-config
+│   │   │   │   ├───storage
+│   │   │   │   └───vertexai
+│   │   │   └───lite
+│   │   │       └───dist
+│   │   │           ├───analytics
+│   │   │           ├───app
+│   │   │           ├───app-check
+│   │   │           ├───auth
+│   │   │           │   ├───cordova
+│   │   │           │   └───web-extension
+│   │   │           ├───compat
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   └───storage
+│   │   │           ├───data-connect
+│   │   │           ├───database
+│   │   │           ├───esm
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   │   ├───cordova
+│   │   │           │   │   └───web-extension
+│   │   │           │   ├───compat
+│   │   │           │   │   ├───analytics
+│   │   │           │   │   ├───app
+│   │   │           │   │   ├───app-check
+│   │   │           │   │   ├───auth
+│   │   │           │   │   ├───database
+│   │   │           │   │   ├───firestore
+│   │   │           │   │   ├───functions
+│   │   │           │   │   ├───installations
+│   │   │           │   │   ├───messaging
+│   │   │           │   │   ├───performance
+│   │   │           │   │   ├───remote-config
+│   │   │           │   │   └───storage
+│   │   │           │   ├───data-connect
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   │   └───lite
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   │   └───sw
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   ├───storage
+│   │   │           │   └───vertexai
+│   │   │           ├───firestore
+│   │   │           │   └───lite
+│   │   │           ├───functions
+│   │   │           ├───installations
+│   │   │           ├───messaging
+│   │   │           │   └───sw
+│   │   │           ├───performance
+│   │   │           ├───remote-config
+│   │   │           ├───storage
+│   │   │           └───vertexai
+│   │   ├───functions
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───installations
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───messaging
+│   │   │   ├───dist
+│   │   │   │   ├───analytics
+│   │   │   │   ├───app
+│   │   │   │   ├───app-check
+│   │   │   │   ├───auth
+│   │   │   │   │   ├───cordova
+│   │   │   │   │   └───web-extension
+│   │   │   │   ├───compat
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   └───storage
+│   │   │   │   ├───data-connect
+│   │   │   │   ├───database
+│   │   │   │   ├───esm
+│   │   │   │   │   ├───analytics
+│   │   │   │   │   ├───app
+│   │   │   │   │   ├───app-check
+│   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───cordova
+│   │   │   │   │   │   └───web-extension
+│   │   │   │   │   ├───compat
+│   │   │   │   │   │   ├───analytics
+│   │   │   │   │   │   ├───app
+│   │   │   │   │   │   ├───app-check
+│   │   │   │   │   │   ├───auth
+│   │   │   │   │   │   ├───database
+│   │   │   │   │   │   ├───firestore
+│   │   │   │   │   │   ├───functions
+│   │   │   │   │   │   ├───installations
+│   │   │   │   │   │   ├───messaging
+│   │   │   │   │   │   ├───performance
+│   │   │   │   │   │   ├───remote-config
+│   │   │   │   │   │   └───storage
+│   │   │   │   │   ├───data-connect
+│   │   │   │   │   ├───database
+│   │   │   │   │   ├───firestore
+│   │   │   │   │   │   └───lite
+│   │   │   │   │   ├───functions
+│   │   │   │   │   ├───installations
+│   │   │   │   │   ├───messaging
+│   │   │   │   │   │   └───sw
+│   │   │   │   │   ├───performance
+│   │   │   │   │   ├───remote-config
+│   │   │   │   │   ├───storage
+│   │   │   │   │   └───vertexai
+│   │   │   │   ├───firestore
+│   │   │   │   │   └───lite
+│   │   │   │   ├───functions
+│   │   │   │   ├───installations
+│   │   │   │   ├───messaging
+│   │   │   │   │   └───sw
+│   │   │   │   ├───performance
+│   │   │   │   ├───remote-config
+│   │   │   │   ├───storage
+│   │   │   │   └───vertexai
+│   │   │   └───sw
+│   │   │       └───dist
+│   │   │           ├───analytics
+│   │   │           ├───app
+│   │   │           ├───app-check
+│   │   │           ├───auth
+│   │   │           │   ├───cordova
+│   │   │           │   └───web-extension
+│   │   │           ├───compat
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   └───storage
+│   │   │           ├───data-connect
+│   │   │           ├───database
+│   │   │           ├───esm
+│   │   │           │   ├───analytics
+│   │   │           │   ├───app
+│   │   │           │   ├───app-check
+│   │   │           │   ├───auth
+│   │   │           │   │   ├───cordova
+│   │   │           │   │   └───web-extension
+│   │   │           │   ├───compat
+│   │   │           │   │   ├───analytics
+│   │   │           │   │   ├───app
+│   │   │           │   │   ├───app-check
+│   │   │           │   │   ├───auth
+│   │   │           │   │   ├───database
+│   │   │           │   │   ├───firestore
+│   │   │           │   │   ├───functions
+│   │   │           │   │   ├───installations
+│   │   │           │   │   ├───messaging
+│   │   │           │   │   ├───performance
+│   │   │           │   │   ├───remote-config
+│   │   │           │   │   └───storage
+│   │   │           │   ├───data-connect
+│   │   │           │   ├───database
+│   │   │           │   ├───firestore
+│   │   │           │   │   └───lite
+│   │   │           │   ├───functions
+│   │   │           │   ├───installations
+│   │   │           │   ├───messaging
+│   │   │           │   │   └───sw
+│   │   │           │   ├───performance
+│   │   │           │   ├───remote-config
+│   │   │           │   ├───storage
+│   │   │           │   └───vertexai
+│   │   │           ├───firestore
+│   │   │           │   └───lite
+│   │   │           ├───functions
+│   │   │           ├───installations
+│   │   │           ├───messaging
+│   │   │           │   └───sw
+│   │   │           ├───performance
+│   │   │           ├───remote-config
+│   │   │           ├───storage
+│   │   │           └───vertexai
+│   │   ├───performance
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───remote-config
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   ├───storage
+│   │   │   └───dist
+│   │   │       ├───analytics
+│   │   │       ├───app
+│   │   │       ├───app-check
+│   │   │       ├───auth
+│   │   │       │   ├───cordova
+│   │   │       │   └───web-extension
+│   │   │       ├───compat
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   └───storage
+│   │   │       ├───data-connect
+│   │   │       ├───database
+│   │   │       ├───esm
+│   │   │       │   ├───analytics
+│   │   │       │   ├───app
+│   │   │       │   ├───app-check
+│   │   │       │   ├───auth
+│   │   │       │   │   ├───cordova
+│   │   │       │   │   └───web-extension
+│   │   │       │   ├───compat
+│   │   │       │   │   ├───analytics
+│   │   │       │   │   ├───app
+│   │   │       │   │   ├───app-check
+│   │   │       │   │   ├───auth
+│   │   │       │   │   ├───database
+│   │   │       │   │   ├───firestore
+│   │   │       │   │   ├───functions
+│   │   │       │   │   ├───installations
+│   │   │       │   │   ├───messaging
+│   │   │       │   │   ├───performance
+│   │   │       │   │   ├───remote-config
+│   │   │       │   │   └───storage
+│   │   │       │   ├───data-connect
+│   │   │       │   ├───database
+│   │   │       │   ├───firestore
+│   │   │       │   │   └───lite
+│   │   │       │   ├───functions
+│   │   │       │   ├───installations
+│   │   │       │   ├───messaging
+│   │   │       │   │   └───sw
+│   │   │       │   ├───performance
+│   │   │       │   ├───remote-config
+│   │   │       │   ├───storage
+│   │   │       │   └───vertexai
+│   │   │       ├───firestore
+│   │   │       │   └───lite
+│   │   │       ├───functions
+│   │   │       ├───installations
+│   │   │       ├───messaging
+│   │   │       │   └───sw
+│   │   │       ├───performance
+│   │   │       ├───remote-config
+│   │   │       ├───storage
+│   │   │       └───vertexai
+│   │   └───vertexai
+│   │       └───dist
+│   │           ├───analytics
+│   │           ├───app
+│   │           ├───app-check
+│   │           ├───auth
+│   │           │   ├───cordova
+│   │           │   └───web-extension
+│   │           ├───compat
+│   │           │   ├───analytics
+│   │           │   ├───app
+│   │           │   ├───app-check
+│   │           │   ├───auth
+│   │           │   ├───database
+│   │           │   ├───firestore
+│   │           │   ├───functions
+│   │           │   ├───installations
+│   │           │   ├───messaging
+│   │           │   ├───performance
+│   │           │   ├───remote-config
+│   │           │   └───storage
+│   │           ├───data-connect
+│   │           ├───database
+│   │           ├───esm
+│   │           │   ├───analytics
+│   │           │   ├───app
+│   │           │   ├───app-check
+│   │           │   ├───auth
+│   │           │   │   ├───cordova
+│   │           │   │   └───web-extension
+│   │           │   ├───compat
+│   │           │   │   ├───analytics
+│   │           │   │   ├───app
+│   │           │   │   ├───app-check
+│   │           │   │   ├───auth
+│   │           │   │   ├───database
+│   │           │   │   ├───firestore
+│   │           │   │   ├───functions
+│   │           │   │   ├───installations
+│   │           │   │   ├───messaging
+│   │           │   │   ├───performance
+│   │           │   │   ├───remote-config
+│   │           │   │   └───storage
+│   │           │   ├───data-connect
+│   │           │   ├───database
+│   │           │   ├───firestore
+│   │           │   │   └───lite
+│   │           │   ├───functions
+│   │           │   ├───installations
+│   │           │   ├───messaging
+│   │           │   │   └───sw
+│   │           │   ├───performance
+│   │           │   ├───remote-config
+│   │           │   ├───storage
+│   │           │   └───vertexai
+│   │           ├───firestore
+│   │           │   └───lite
+│   │           ├───functions
+│   │           ├───installations
+│   │           ├───messaging
+│   │           │   └───sw
+│   │           ├───performance
+│   │           ├───remote-config
+│   │           ├───storage
+│   │           └───vertexai
+│   ├───flat
+│   │   └───test
+│   ├───follow-redirects
+│   ├───forwarded
+│   ├───fresh
+│   ├───function-bind
+│   │   ├───.github
+│   │   └───test
+│   ├───get-caller-file
+│   ├───get-intrinsic
+│   │   ├───.github
+│   │   └───test
+│   ├───glob-parent
+│   ├───glob-to-regexp
+│   ├───gopd
+│   │   ├───.github
+│   │   └───test
+│   ├───graceful-fs
+│   ├───handle-thing
+│   │   ├───lib
+│   │   └───test
+│   ├───has-flag
+│   ├───has-property-descriptors
+│   │   ├───.github
+│   │   └───test
+│   ├───has-proto
+│   │   ├───.github
+│   │   └───test
+│   ├───has-symbols
+│   │   ├───.github
+│   │   └───test
+│   │       └───shams
+│   ├───hasown
+│   │   └───.github
+│   ├───he
+│   │   ├───bin
+│   │   └───man
+│   ├───hpack.js
+│   │   ├───bin
+│   │   ├───lib
+│   │   │   └───hpack
+│   │   ├───node_modules
+│   │   │   ├───readable-stream
+│   │   │   │   ├───doc
+│   │   │   │   │   └───wg-meetings
+│   │   │   │   └───lib
+│   │   │   │       └───internal
+│   │   │   │           └───streams
+│   │   │   ├───safe-buffer
+│   │   │   └───string_decoder
+│   │   │       └───lib
+│   │   ├───test
+│   │   └───tools
+│   ├───html-entities
+│   │   ├───lib
+│   │   └───src
+│   ├───html-minifier-terser
+│   │   └───src
+│   ├───html-webpack-plugin
+│   │   └───lib
+│   ├───htmlparser2
+│   │   └───lib
+│   ├───http-deceiver
+│   │   ├───lib
+│   │   └───test
+│   ├───http-errors
+│   ├───http-parser-js
+│   ├───http-proxy
+│   │   └───lib
+│   │       └───http-proxy
+│   │           └───passes
+│   ├───http-proxy-middleware
+│   │   └───dist
+│   │       └───handlers
+│   ├───hyperdyperid
+│   │   └───lib
+│   │       └───__tests__
+│   ├───iconv-lite
+│   │   ├───encodings
+│   │   │   └───tables
+│   │   └───lib
+│   ├───idb
+│   │   └───build
+│   ├───import-local
+│   │   └───fixtures
+│   ├───inherits
+│   ├───interpret
+│   ├───ipaddr.js
+│   │   └───lib
+│   ├───is-binary-path
+│   ├───is-core-module
+│   │   └───test
+│   ├───is-docker
+│   ├───is-extglob
+│   ├───is-fullwidth-code-point
+│   ├───is-glob
+│   ├───is-inside-container
+│   ├───is-network-error
+│   ├───is-number
+│   ├───is-plain-obj
+│   ├───is-plain-object
+│   ├───is-wsl
+│   ├───isarray
+│   ├───isexe
+│   │   └───test
+│   ├───isobject
+│   ├───jest-worker
+│   │   ├───build
+│   │   │   ├───base
+│   │   │   └───workers
+│   │   └───node_modules
+│   │       └───supports-color
+│   ├───js-tokens
+│   ├───json-parse-even-better-errors
+│   ├───json-schema-traverse
+│   │   └───spec
+│   │       └───fixtures
+│   ├───kind-of
+│   ├───launch-editor
+│   │   └───editor-info
+│   ├───loader-runner
+│   │   └───lib
+│   ├───locate-path
+│   ├───lodash
+│   │   └───fp
+│   ├───lodash.camelcase
+│   ├───long
+│   │   └───umd
+│   ├───loose-envify
+│   ├───lower-case
+│   │   ├───dist
+│   │   └───dist.es2015
+│   ├───media-typer
+│   ├───memfs
+│   │   ├───demo
+│   │   └───lib
+│   │       ├───cas
+│   │       ├───consts
+│   │       ├───crud
+│   │       ├───crud-to-cas
+│   │       ├───fsa
+│   │       ├───fsa-to-crud
+│   │       ├───fsa-to-node
+│   │       │   └───worker
+│   │       ├───internal
+│   │       ├───node
+│   │       │   ├───lists
+│   │       │   └───types
+│   │       ├───node-to-crud
+│   │       ├───node-to-fsa
+│   │       ├───print
+│   │       ├───snapshot
+│   │       ├───thingies
+│   │       └───webfs
+│   ├───merge-descriptors
+│   ├───merge-stream
+│   ├───methods
+│   ├───micromatch
+│   ├───mime
+│   │   └───src
+│   ├───mime-db
+│   ├───mime-types
+│   ├───minimalistic-assert
+│   ├───ms
+│   ├───multicast-dns
+│   ├───negotiator
+│   │   └───lib
+│   ├───neo-async
+│   ├───no-case
+│   │   ├───dist
+│   │   └───dist.es2015
+│   ├───node-forge
+│   │   ├───dist
+│   │   ├───flash
+│   │   │   └───swf
+│   │   └───lib
+│   ├───node-releases
+│   │   └───data
+│   │       ├───processed
+│   │       └───release-schedule
+│   ├───normalize-path
+│   ├───nth-check
+│   │   └───lib
+│   │       └───esm
+│   ├───object-inspect
+│   │   ├───.github
+│   │   ├───example
+│   │   └───test
+│   │       └───browser
+│   ├───obuf
+│   │   └───test
+│   ├───on-finished
+│   ├───on-headers
+│   ├───open
+│   ├───p-limit
+│   ├───p-locate
+│   ├───p-retry
+│   ├───p-try
+│   ├───param-case
+│   │   ├───dist
+│   │   └───dist.es2015
+│   ├───parseurl
+│   ├───pascal-case
+│   │   ├───dist
+│   │   └───dist.es2015
+│   ├───path-exists
+│   ├───path-key
+│   ├───path-parse
+│   ├───path-to-regexp
+│   ├───picocolors
+│   ├───picomatch
+│   │   └───lib
+│   ├───pkg-dir
+│   ├───pretty-error
+│   │   ├───.github
+│   │   │   └───workflows
+│   │   ├───lib
+│   │   ├───src
+│   │   └───test
+│   ├───process-nextick-args
+│   ├───protobufjs
+│   │   ├───dist
+│   │   │   ├───light
+│   │   │   └───minimal
+│   │   ├───ext
+│   │   │   ├───debug
+│   │   │   └───descriptor
+│   │   ├───google
+│   │   │   ├───api
+│   │   │   └───protobuf
+│   │   ├───scripts
+│   │   └───src
+│   │       ├───rpc
+│   │       └───util
+│   ├───proxy-addr
+│   │   └───node_modules
+│   │       └───ipaddr.js
+│   │           └───lib
+│   ├───punycode
+│   ├───qs
+│   │   ├───.github
+│   │   ├───dist
+│   │   ├───lib
+│   │   └───test
+│   ├───randombytes
+│   ├───range-parser
+│   ├───raw-body
+│   ├───react
+│   │   ├───cjs
+│   │   └───umd
+│   ├───react-dom
+│   │   ├───cjs
+│   │   └───umd
+│   ├───readable-stream
+│   │   └───lib
+│   │       └───internal
+│   │           └───streams
+│   ├───readdirp
+│   ├───rechoir
+│   │   └───lib
+│   ├───relateurl
+│   │   └───lib
+│   │       ├───parse
+│   │       ├───relate
+│   │       └───util
+│   ├───renderkid
+│   │   ├───docs
+│   │   │   └───images
+│   │   └───lib
+│   │       ├───ansiPainter
+│   │       ├───layout
+│   │       │   └───block
+│   │       │       ├───blockAppendor
+│   │       │       ├───blockPrependor
+│   │       │       ├───lineAppendor
+│   │       │       ├───linePrependor
+│   │       │       └───lineWrapper
+│   │       └───renderKid
+│   │           ├───styleApplier
+│   │           └───styles
+│   │               └───rule
+│   │                   └───declarationBlock
+│   ├───require-directory
+│   ├───require-from-string
+│   ├───requires-port
+│   ├───resolve
+│   │   ├───.github
+│   │   ├───bin
+│   │   ├───example
+│   │   ├───lib
+│   │   └───test
+│   │       ├───dotdot
+│   │       │   └───abc
+│   │       ├───module_dir
+│   │       │   ├───xmodules
+│   │       │   │   └───aaa
+│   │       │   ├───ymodules
+│   │       │   │   └───aaa
+│   │       │   └───zmodules
+│   │       │       └───bbb
+│   │       ├───node_path
+│   │       │   ├───x
+│   │       │   │   ├───aaa
+│   │       │   │   └───ccc
+│   │       │   └───y
+│   │       │       ├───bbb
+│   │       │       └───ccc
+│   │       ├───pathfilter
+│   │       │   └───deep_ref
+│   │       ├───precedence
+│   │       │   ├───aaa
+│   │       │   └───bbb
+│   │       ├───resolver
+│   │       │   ├───baz
+│   │       │   ├───browser_field
+│   │       │   ├───dot_main
+│   │       │   ├───dot_slash_main
+│   │       │   ├───false_main
+│   │       │   ├───incorrect_main
+│   │       │   ├───invalid_main
+│   │       │   ├───multirepo
+│   │       │   │   └───packages
+│   │       │   │       ├───package-a
+│   │       │   │       └───package-b
+│   │       │   ├───nested_symlinks
+│   │       │   │   └───mylib
+│   │       │   ├───other_path
+│   │       │   │   └───lib
+│   │       │   ├───quux
+│   │       │   │   └───foo
+│   │       │   ├───same_names
+│   │       │   │   └───foo
+│   │       │   ├───symlinked
+│   │       │   │   ├───package
+│   │       │   │   └───_
+│   │       │   │       ├───node_modules
+│   │       │   │       └───symlink_target
+│   │       │   └───without_basedir
+│   │       └───shadowed_core
+│   │           └───node_modules
+│   │               └───util
+│   ├───resolve-cwd
+│   ├───resolve-from
+│   ├───retry
+│   │   ├───example
+│   │   └───lib
+│   ├───run-applescript
+│   ├───safe-buffer
+│   ├───safer-buffer
+│   ├───scheduler
+│   │   ├───cjs
+│   │   └───umd
+│   ├───schema-utils
+│   │   ├───declarations
+│   │   │   ├───keywords
+│   │   │   └───util
+│   │   └───dist
+│   │       ├───keywords
+│   │       └───util
+│   ├───select-hose
+│   │   ├───lib
+│   │   └───test
+│   ├───selfsigned
+│   │   └───test
+│   ├───semver
+│   │   ├───bin
+│   │   ├───classes
+│   │   ├───functions
+│   │   ├───internal
+│   │   └───ranges
+│   ├───send
+│   │   └───node_modules
+│   │       ├───encodeurl
+│   │       └───ms
+│   ├───serialize-javascript
+│   ├───serve-index
+│   │   ├───node_modules
+│   │   │   ├───depd
+│   │   │   │   └───lib
+│   │   │   │       ├───browser
+│   │   │   │       └───compat
+│   │   │   ├───http-errors
+│   │   │   ├───inherits
+│   │   │   ├───setprototypeof
+│   │   │   └───statuses
+│   │   └───public
+│   │       └───icons
+│   ├───serve-static
+│   ├───set-function-length
+│   │   └───.github
+│   ├───setprototypeof
+│   │   └───test
+│   ├───shallow-clone
+│   ├───shebang-command
+│   ├───shebang-regex
+│   ├───shell-quote
+│   │   ├───.github
+│   │   ├───example
+│   │   └───test
+│   ├───side-channel
+│   │   ├───.github
+│   │   └───test
+│   ├───sockjs
+│   │   └───lib
+│   ├───source-map
+│   │   ├───dist
+│   │   └───lib
+│   ├───source-map-support
+│   ├───spdy
+│   │   ├───lib
+│   │   │   └───spdy
+│   │   ├───node_modules
+│   │   │   ├───debug
+│   │   │   │   └───src
+│   │   │   └───ms
+│   │   └───test
+│   ├───spdy-transport
+│   │   ├───lib
+│   │   │   └───spdy-transport
+│   │   │       └───protocol
+│   │   │           ├───base
+│   │   │           ├───http2
+│   │   │           └───spdy
+│   │   └───node_modules
+│   │       ├───debug
+│   │       │   └───src
+│   │       └───ms
+│   ├───statuses
+│   ├───string-width
+│   ├───string_decoder
+│   │   └───lib
+│   ├───strip-ansi
+│   ├───supports-color
+│   ├───supports-preserve-symlinks-flag
+│   │   ├───.github
+│   │   └───test
+│   ├───tapable
+│   │   └───lib
+│   ├───terser
+│   │   ├───bin
+│   │   ├───dist
+│   │   ├───lib
+│   │   │   ├───compress
+│   │   │   └───utils
+│   │   ├───node_modules
+│   │   │   └───commander
+│   │   │       └───typings
+│   │   └───tools
+│   ├───terser-webpack-plugin
+│   │   ├───dist
+│   │   └───types
+│   ├───thingies
+│   │   ├───es2020
+│   │   ├───es6
+│   │   └───lib
+│   ├───thunky
+│   ├───to-regex-range
+│   ├───toidentifier
+│   ├───tree-dump
+│   │   └───lib
+│   ├───ts-loader
+│   │   ├───dist
+│   │   └───node_modules
+│   │       └───source-map
+│   │           ├───dist
+│   │           └───lib
+│   ├───tslib
+│   │   └───modules
+│   ├───type-is
+│   ├───typescript
+│   │   ├───bin
+│   │   └───lib
+│   │       ├───cs
+│   │       ├───de
+│   │       ├───es
+│   │       ├───fr
+│   │       ├───it
+│   │       ├───ja
+│   │       ├───ko
+│   │       ├───pl
+│   │       ├───pt-br
+│   │       ├───ru
+│   │       ├───tr
+│   │       ├───zh-cn
+│   │       └───zh-tw
+│   ├───undici-types
+│   ├───unpipe
+│   ├───update-browserslist-db
+│   ├───uri-js
+│   │   └───dist
+│   │       ├───es5
+│   │       └───esnext
+│   │           └───schemes
+│   ├───util-deprecate
+│   ├───utila
+│   │   ├───lib
+│   │   └───test
+│   ├───utils-merge
+│   ├───uuid
+│   │   └───dist
+│   │       ├───bin
+│   │       ├───esm-browser
+│   │       ├───esm-node
+│   │       └───umd
+│   ├───vary
+│   ├───watchpack
+│   │   └───lib
+│   ├───wbuf
+│   │   └───test
+│   ├───webpack
+│   │   ├───bin
+│   │   ├───hot
+│   │   ├───lib
+│   │   │   ├───asset
+│   │   │   ├───async-modules
+│   │   │   ├───cache
+│   │   │   ├───config
+│   │   │   ├───container
+│   │   │   ├───css
+│   │   │   ├───debug
+│   │   │   ├───dependencies
+│   │   │   ├───electron
+│   │   │   ├───errors
+│   │   │   ├───esm
+│   │   │   ├───hmr
+│   │   │   ├───ids
+│   │   │   ├───javascript
+│   │   │   ├───json
+│   │   │   ├───library
+│   │   │   ├───logging
+│   │   │   ├───node
+│   │   │   ├───optimize
+│   │   │   ├───performance
+│   │   │   ├───prefetch
+│   │   │   ├───rules
+│   │   │   ├───runtime
+│   │   │   ├───schemes
+│   │   │   ├───serialization
+│   │   │   ├───sharing
+│   │   │   ├───stats
+│   │   │   ├───util
+│   │   │   │   └───hash
+│   │   │   ├───wasm
+│   │   │   ├───wasm-async
+│   │   │   ├───wasm-sync
+│   │   │   ├───web
+│   │   │   └───webworker
+│   │   └───schemas
+│   │       └───plugins
+│   │           ├───asset
+│   │           ├───container
+│   │           ├───css
+│   │           ├───debug
+│   │           ├───ids
+│   │           ├───optimize
+│   │           ├───schemes
+│   │           └───sharing
+│   ├───webpack-cli
+│   │   ├───bin
+│   │   ├───lib
+│   │   │   ├───plugins
+│   │   │   └───utils
+│   │   └───node_modules
+│   │       └───commander
+│   │           ├───lib
+│   │           └───typings
+│   ├───webpack-dev-middleware
+│   │   ├───dist
+│   │   │   └───utils
+│   │   ├───node_modules
+│   │   │   ├───ajv
+│   │   │   │   ├───dist
+│   │   │   │   │   ├───compile
+│   │   │   │   │   │   ├───codegen
+│   │   │   │   │   │   ├───jtd
+│   │   │   │   │   │   └───validate
+│   │   │   │   │   ├───refs
+│   │   │   │   │   │   ├───json-schema-2019-09
+│   │   │   │   │   │   │   └───meta
+│   │   │   │   │   │   └───json-schema-2020-12
+│   │   │   │   │   │       └───meta
+│   │   │   │   │   ├───runtime
+│   │   │   │   │   ├───standalone
+│   │   │   │   │   ├───types
+│   │   │   │   │   └───vocabularies
+│   │   │   │   │       ├───applicator
+│   │   │   │   │       ├───core
+│   │   │   │   │       ├───discriminator
+│   │   │   │   │       ├───dynamic
+│   │   │   │   │       ├───format
+│   │   │   │   │       ├───jtd
+│   │   │   │   │       ├───unevaluated
+│   │   │   │   │       └───validation
+│   │   │   │   └───lib
+│   │   │   │       ├───compile
+│   │   │   │       │   ├───codegen
+│   │   │   │       │   ├───jtd
+│   │   │   │       │   └───validate
+│   │   │   │       ├───refs
+│   │   │   │       │   ├───json-schema-2019-09
+│   │   │   │       │   │   └───meta
+│   │   │   │       │   └───json-schema-2020-12
+│   │   │   │       │       └───meta
+│   │   │   │       ├───runtime
+│   │   │   │       ├───standalone
+│   │   │   │       ├───types
+│   │   │   │       └───vocabularies
+│   │   │   │           ├───applicator
+│   │   │   │           ├───core
+│   │   │   │           ├───discriminator
+│   │   │   │           ├───dynamic
+│   │   │   │           ├───format
+│   │   │   │           ├───jtd
+│   │   │   │           ├───unevaluated
+│   │   │   │           └───validation
+│   │   │   ├───ajv-keywords
+│   │   │   │   ├───dist
+│   │   │   │   │   ├───definitions
+│   │   │   │   │   └───keywords
+│   │   │   │   └───src
+│   │   │   │       ├───definitions
+│   │   │   │       └───keywords
+│   │   │   ├───json-schema-traverse
+│   │   │   │   ├───.github
+│   │   │   │   │   └───workflows
+│   │   │   │   └───spec
+│   │   │   │       └───fixtures
+│   │   │   └───schema-utils
+│   │   │       ├───declarations
+│   │   │       │   ├───keywords
+│   │   │       │   └───util
+│   │   │       └───dist
+│   │   │           ├───keywords
+│   │   │           └───util
+│   │   └───types
+│   │       └───utils
+│   ├───webpack-dev-server
+│   │   ├───bin
+│   │   ├───client
+│   │   │   ├───clients
+│   │   │   ├───modules
+│   │   │   │   ├───logger
+│   │   │   │   └───sockjs-client
+│   │   │   ├───overlay
+│   │   │   └───utils
+│   │   ├───lib
+│   │   │   └───servers
+│   │   ├───node_modules
+│   │   │   ├───ajv
+│   │   │   │   ├───dist
+│   │   │   │   │   ├───compile
+│   │   │   │   │   │   ├───codegen
+│   │   │   │   │   │   ├───jtd
+│   │   │   │   │   │   └───validate
+│   │   │   │   │   ├───refs
+│   │   │   │   │   │   ├───json-schema-2019-09
+│   │   │   │   │   │   │   └───meta
+│   │   │   │   │   │   └───json-schema-2020-12
+│   │   │   │   │   │       └───meta
+│   │   │   │   │   ├───runtime
+│   │   │   │   │   ├───standalone
+│   │   │   │   │   ├───types
+│   │   │   │   │   └───vocabularies
+│   │   │   │   │       ├───applicator
+│   │   │   │   │       ├───core
+│   │   │   │   │       ├───discriminator
+│   │   │   │   │       ├───dynamic
+│   │   │   │   │       ├───format
+│   │   │   │   │       ├───jtd
+│   │   │   │   │       ├───unevaluated
+│   │   │   │   │       └───validation
+│   │   │   │   └───lib
+│   │   │   │       ├───compile
+│   │   │   │       │   ├───codegen
+│   │   │   │       │   ├───jtd
+│   │   │   │       │   └───validate
+│   │   │   │       ├───refs
+│   │   │   │       │   ├───json-schema-2019-09
+│   │   │   │       │   │   └───meta
+│   │   │   │       │   └───json-schema-2020-12
+│   │   │   │       │       └───meta
+│   │   │   │       ├───runtime
+│   │   │   │       ├───standalone
+│   │   │   │       ├───types
+│   │   │   │       └───vocabularies
+│   │   │   │           ├───applicator
+│   │   │   │           ├───core
+│   │   │   │           ├───discriminator
+│   │   │   │           ├───dynamic
+│   │   │   │           ├───format
+│   │   │   │           ├───jtd
+│   │   │   │           ├───unevaluated
+│   │   │   │           └───validation
+│   │   │   ├───ajv-keywords
+│   │   │   │   ├───dist
+│   │   │   │   │   ├───definitions
+│   │   │   │   │   └───keywords
+│   │   │   │   └───src
+│   │   │   │       ├───definitions
+│   │   │   │       └───keywords
+│   │   │   ├───json-schema-traverse
+│   │   │   │   ├───.github
+│   │   │   │   │   └───workflows
+│   │   │   │   └───spec
+│   │   │   │       └───fixtures
+│   │   │   └───schema-utils
+│   │   │       ├───declarations
+│   │   │       │   ├───keywords
+│   │   │       │   └───util
+│   │   │       └───dist
+│   │   │           ├───keywords
+│   │   │           └───util
+│   │   └───types
+│   │       ├───bin
+│   │       └───lib
+│   │           └───servers
+│   ├───webpack-merge
+│   │   └───dist
+│   ├───webpack-sources
+│   │   └───lib
+│   │       └───helpers
+│   ├───websocket-driver
+│   │   └───lib
+│   │       └───websocket
+│   │           └───driver
+│   │               └───hybi
+│   ├───websocket-extensions
+│   │   └───lib
+│   │       └───pipeline
+│   ├───which
+│   │   └───bin
+│   ├───wildcard
+│   │   ├───.github
+│   │   │   └───workflows
+│   │   ├───examples
+│   │   └───test
+│   ├───wrap-ansi
+│   ├───ws
+│   │   └───lib
+│   ├───y18n
+│   │   └───build
+│   │       └───lib
+│   │           └───platform-shims
+│   ├───yargs
+│   │   ├───build
+│   │   │   └───lib
+│   │   │       ├───typings
+│   │   │       └───utils
+│   │   ├───helpers
+│   │   ├───lib
+│   │   │   └───platform-shims
+│   │   └───locales
+│   └───yargs-parser
+│       └───build
+│           └───lib
+├───public
+└───src
+    └───components
+
+c:\xampp2\htdocs\Manager>
