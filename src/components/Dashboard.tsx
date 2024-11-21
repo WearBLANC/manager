@@ -1,38 +1,55 @@
-import React, { useEffect, useState } from "react";
-import { auth, db } from "../firebase";
-import { doc, getDoc } from "firebase/firestore";
+import React from "react";
+import { useEffect, useState } from "react";
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
+  const [user, setUser] = useState<any>(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [loading, setLoading] = useState(true);
+
+  // Mock: Define roles (in production, use Firestore or a backend service)
+  const adminEmails = ["admin@example.com"]; // Replace with actual admin emails or roles.
 
   useEffect(() => {
-    const checkAdmin = async () => {
-      const user = auth.currentUser;
-      if (user) {
-        const userDoc = await getDoc(doc(db, "users", user.uid));
-        if (userDoc.exists() && userDoc.data().role === "admin") {
-          setIsAdmin(true);
-        }
-      }
-      setLoading(false);
-    };
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
 
-    checkAdmin();
+      if (currentUser && adminEmails.includes(currentUser.email || "")) {
+        setIsAdmin(true);
+      } else {
+        setIsAdmin(false);
+      }
+    });
+
+    return () => unsubscribe();
   }, []);
 
-  if (loading) {
-    return <p>Carregando...</p>;
+  if (!user) {
+    return (
+      <div>
+        <h1>Access Denied</h1>
+        <p>You must be logged in to view this page.</p>
+      </div>
+    );
   }
 
   if (!isAdmin) {
-    return <p>Acesso negado. Esta página é apenas para administradores.</p>;
+    return (
+      <div>
+        <h1>Access Denied</h1>
+        <p>You do not have the necessary permissions to access this page.</p>
+      </div>
+    );
   }
 
   return (
     <div>
-      <h1>Dashboard do Administrador</h1>
-      <p>Bem-vindo à área restrita.</p>
+      <h1>Admin Dashboard</h1>
+      <p>Welcome, {user.email}!</p>
+      <div>
+        {/* Add admin-specific features here */}
+        <p>Here you can manage users, view analytics, and more.</p>
+      </div>
     </div>
   );
 };
